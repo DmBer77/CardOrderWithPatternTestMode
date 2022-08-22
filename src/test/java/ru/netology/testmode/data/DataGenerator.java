@@ -57,14 +57,14 @@ public class DataGenerator {
 
         public static RegistrationDto getUser(String status) {
             // TODO: создать пользователя user используя методы getRandomLogin(), getRandomPassword() и параметр status
-            return new RegistrationDto(getRandomLogin(), getRandomPassword(),status);
+            return new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
         }
 
         public static RegistrationDto getRegisteredUser(String status) {
             // TODO: объявить переменную registeredUser и присвоить ей значение возвращённое getUser(status).
             // Послать запрос на регистрацию пользователя с помощью вызова sendRequest(registeredUser)
             RegistrationDto registeredUser = getUser(status);
-            sendRequest (registeredUser);
+            sendRequest(registeredUser);
             return registeredUser;
         }
     }
